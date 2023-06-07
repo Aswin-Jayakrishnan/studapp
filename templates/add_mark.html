@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" action="/mark_post">
+    <table border="1">
+    <tr>
+        <th>Student</th><input type="hidden" name="h1" value="{{ data['roll_no'] }}">
+        <td>{{ data['name'] }}</td>
+    </tr>
+
+    <tr>
+        <th>Mark</th>
+        <td><select name="m1">
+            <option value="S Grade">100 - 91</option>
+            <option value="A Grade"> 90 - 81</option>
+            <option value="B Grade"> 80 - 71</option>
+            <option value="C Grade"> 70 - 61</option>
+            <option value="D Grade"> 60 - 51</option>
+            <option value="E Grade"> 50 - 55</option>
+            <option value="F Grade"> 50 - 55</option>
+        </select></td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center"><input type="submit" value="SUBMIT"></td>
+    </tr>
+    </table>
+</form>
+</body>
+</html>

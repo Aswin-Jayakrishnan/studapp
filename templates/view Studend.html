@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" action="">
+    <table border="1">
+        <tr>
+            <th>Roll No</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Gender</th>
+            <th>DOB</th>
+            <th colspan="2"></th>
+        </tr>
+        {% for i in data %}
+        <tr>
+            <td>{{ loop.index }}</td>
+            <td>{{ i['name'] }}</td>
+            <td>{{ i['email'] }}</td>
+            <td>{{ i['gender'] }}</td>
+            <td>{{ i['dob'] }}</td>
+            <td><a href="/add_mark/{{ i['roll_no'] }}">Add mark</a> </td>
+            <td><a href="/view_mark/{{ i['roll_no'] }}">View mark</a> </td>
+        </tr>
+        {% endfor %}
+    </table>
+</form>
+
+</body>
+</html>
